@@ -1,0 +1,55 @@
+html { 
+    box-sizing: border-box;
+    background: lightgoldenrodyellow;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body{
+    margin:0;
+}
+
+*, *:before, *::after{
+    box-sizing:inherit; /*defines how the height and width of the element to be calculated, should they include padding and borders or not.*/
+}
+
+h1{
+    margin-top: 0;
+}
+
+.site_wrap{
+    max-width:700px;
+    margin:100px auto;
+    background: white;
+    padding:40px;
+    text-align:justify; 
+}
+
+.align-left{
+    float:left; /* place the elmnt on the right or left of the container, allowing the text to wrap around it */
+    margin-right:20px;
+}
+
+.slide-in{
+    opacity:0;   /* specifies how trnsprnt has to be the elmnt; It is not inherited but due to the parent it applies to everything withi it*/
+    transition:all .5s;     /*controls the animation, speed when changing the property*/
+}
+
+.align-left.slide-in{
+    transform: translateX(-30%) scale(0.95); /* transform property allows us to move, rotate, scale etc. elements */
+}
+
+.align-right.slide-in{
+    transform:translateX(03%) scale(0.95);
+}
+
+.slide-in.active{
+    opacity:1;
+    transform:translateX(0%)scale(1);
+}
+
+
+
+
+
